@@ -31,6 +31,7 @@
       unarchive:
         src: "/tmp/latest.tar.gz"
         dest: /var/www/html/wordpress
+        remote_src: yes
       become: yes
       become_method: sudo
 
