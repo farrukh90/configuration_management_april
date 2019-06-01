@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: update kernel to latest
+      package:
+        name: kernel
+        state: latest
+      become: yes
+      become_method: sudo
