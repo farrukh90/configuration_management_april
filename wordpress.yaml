@@ -30,7 +30,7 @@
     - name: Unzip wordpress file
       unarchive:
         src: "/tmp/wordpress-5.2.1.tar.gz"
-        dest: /var/www/html
+        dest: /var/www/html/
         remote_src: yes
       become: yes
       become_method: sudo
