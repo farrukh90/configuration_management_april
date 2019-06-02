@@ -1,0 +1,8 @@
+---
+- name: Terminates instances
+  hosts: localhost
+  tasks:
+    - name: Terminate instances
+      ec2:
+        instance_ids: i-04652ec5ddae3a1fe
+        state: absent    #stopped   #started
