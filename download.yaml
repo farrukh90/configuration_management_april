@@ -1,6 +1,6 @@
 ---
 - name: Helps to download file
-  hosts: all
+  hosts: localhost
   become: yes
   become_method: sudo
   vars_prompt:
