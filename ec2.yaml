@@ -10,4 +10,4 @@
         count: 3
         vpc_subnet_id: subnet-4ff37d61
         region: us-east-1
-        user_data: '{file("userdata.sh")}'
+        user_data: "{{ lookup('file', 'user_data.sh') }}"
