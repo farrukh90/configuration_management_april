@@ -4,10 +4,10 @@
   tasks:
     - name: Create instances
       ec2:
-        key_name: app-rsa
-        instance_type: t2.micro
-        image: ami-026421e7d4632a780
-        count: 3
-        vpc_subnet_id: subnet-4ff37d61
-        region: us-east-1
+        key_name: "{{key_name}}"
+        instance_type: "{{instance_type}}"
+        image: "{{image}}"
+        count: "{{count}}"
+        vpc_subnet_id: "{{vpc_subnet_id}}"
+        region: "{{region}}"
         user_data: "{{ lookup('file', 'user_data.sh') }}"
