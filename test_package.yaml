@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks: 
+    - name: Install package
+      package:
+        name: "{{package_name}}"
+        state: latest
