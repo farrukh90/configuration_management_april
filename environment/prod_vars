@@ -1,0 +1,6 @@
+key_name:           "app-rsa"
+instance_type:      "t2.large"
+image:              "ami-026421e7d4632a780"
+count:              "3"
+vpc_subnet_id:      "subnet-4ff37d61"
+region:             "us-east-1"
