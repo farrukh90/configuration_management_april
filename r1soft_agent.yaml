@@ -4,20 +4,23 @@
   become: yes
   become_method: sudo 
   tasks: 
-    - name: Create a Repository
-      copy:
-        src: r1soft.repo
-        dest: /etc/yum.repos.d/r1soft.repo
+    - block:
+      when: ansible_distribution == "CentOS"
+      - name: Create a Repository
+        copy:
+          src: r1soft.repo
+          dest: /etc/yum.repos.d/r1soft.repo
     
-    - name: Install r1soft agent
-      package:
-        name: serverbackup-enterprise-agent 
-        state: latest
+      - name: Install r1soft agent
+        package:
+          name: serverbackup-enterprise-agent 
+          state: latest
       
-    - name: Start agent
-      systemd:
-        name: sbm-agent
-        state: restarted
+      - name: Start agent
+        systemd:
+          name: sbm-agent
+          state: restarted
     
-    - name: Get key
-      shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"
+      - name: Get key
+        shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"
+    
