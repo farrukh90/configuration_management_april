@@ -84,13 +84,15 @@
         systemd:
           name: sbm-agent
           state: restarted
+        notify: R1SOFT_INSTALLED_ON_FEDORA_28
+
     
       - name: Get key
         shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"
       when: ansible_distribution == "Fedora" and ansible_distribution_major_version == "28"
 
 
-
+  
   handlers:
     - name: R1SOFT_INSTALLED_ON_CENTOS_7
       systemd:
@@ -101,6 +103,10 @@
          name: cdp-agent
          state: restarted
     - name: R1SOFT_INSTALLED_ON_CENTOS_8
+      systemd:
+         name: sbm-agent
+         state: restarted
+    - name: R1SOFT_INSTALLED_ON_FEDORA_28
       systemd:
          name: sbm-agent
          state: restarted
