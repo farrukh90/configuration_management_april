@@ -5,7 +5,6 @@
   become_method: sudo 
   tasks: 
     - block:
-      when: ansible_distribution == "CentOS"
       - name: Create a Repository
         copy:
           src: r1soft.repo
