@@ -14,3 +14,13 @@
     - name: Install on centos 
       package: 
         name: telnet
+
+
+- hosts: Amazone
+  become: yes
+  become_user: root
+  remote_user: ec2-user
+  tasks:
+    - name: Install on centos 
+      package: 
+        name: telnet
