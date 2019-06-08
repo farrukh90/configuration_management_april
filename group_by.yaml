@@ -8,6 +8,7 @@
 
 
 - hosts: CentOS
+  remote_user: centos
   tasks:
     - name: Install
       package: 
@@ -16,6 +17,7 @@
 
 
 - hosts: Ubuntu
+  remote_user: ubuntu
   tasks:
     - name: Install 
       package: 
