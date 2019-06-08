@@ -10,14 +10,14 @@
 
 
 - hosts: Debian
-  remote_user: admin
+  ansible_user: admin
   tasks:
     - name: Install on debian 
       package: 
         name: telnet
   
 - hosts: Amazon
-  remote_user: ec2-user
+  ansible_user: ec2-user
   become: yes
   become_user: root
   tasks: 
