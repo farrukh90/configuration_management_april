@@ -9,7 +9,7 @@
 
 
 
-- hosts: Debian
+- hosts: "Debian"
   ansible_user: admin
   tasks:
     - name: Install on debian 
