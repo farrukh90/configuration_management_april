@@ -1,6 +1,6 @@
 --- 
 - name: Run tasks based on OS
-  hosts: localhost 
+  hosts: all 
   tasks: 
     - name: Group OS
       group_by: 
