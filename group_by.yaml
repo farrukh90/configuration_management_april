@@ -25,3 +25,12 @@
     - name: Install on ec2 
       package: 
         name: telnet
+
+- hosts: Debian
+  become: yes
+  become_user: root
+  remote_user: admin
+  tasks:
+    - name: Install on debian 
+      package: 
+        name: telnet
