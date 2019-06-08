@@ -16,11 +16,11 @@
         name: telnet
 
 
-- hosts: Amazone
+- hosts: Amazon
   become: yes
   become_user: root
   remote_user: ec2-user
   tasks:
-    - name: Install on centos 
+    - name: Install on ec2 
       package: 
         name: telnet
