@@ -14,3 +14,9 @@
         name: httpd
         state: latest
 
+
+- hosts: Ubuntu
+  tasks:
+    - name: Install 
+      package: 
+        name: telnet
