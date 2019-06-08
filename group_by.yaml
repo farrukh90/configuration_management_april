@@ -4,12 +4,10 @@
   tasks: 
     - name: Group OS
       group_by:
-        key: "OS_TYPE_{{ansible_distribution}}-{{ansible_distribution_version}}"
+        key: "os_{{ansible_distribution}}"
 
 
-
-
-- hosts: OS_TYPE_Debian
+- hosts: os_Debian
   ansible_user: admin
   tasks:
     - name: Install on debian 
