@@ -17,9 +17,7 @@
         name: httpd
         state: latest
     
-    - name: Group OS
-      group_by:
-        key: "{{ansible_distribution}}"
+
 
 - hosts: Debian
   remote_user: admin
