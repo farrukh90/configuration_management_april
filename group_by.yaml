@@ -3,7 +3,8 @@
   hosts: localhost 
   tasks: 
     - name: Group OS
-      group_by: key="{{ansible_distribution}}"
+      group_by: 
+        key: "{{ansible_distribution}}"
 
 
 - hosts: Debian
