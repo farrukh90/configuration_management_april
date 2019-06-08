@@ -12,17 +12,17 @@
   become: yes
   become_user: root
   tasks:
-    - name: Install
+    - name: Install on centos
       package: 
         name: httpd
-        state: absent
+        state: latest
 
 - hosts: Debian
   become: yes
   become_user: root
   remote_user: admin
   tasks:
-    - name: Install 
+    - name: Install on debian 
       package: 
         name: telnet
   
@@ -31,6 +31,6 @@
   become: yes
   become_user: root
   tasks: 
-    - name: Install package
+    - name: Install package on ec2
       package: 
         name: telnet
