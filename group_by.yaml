@@ -7,16 +7,6 @@
         key: "{{ansible_distribution}}"
 
 
-- hosts: CentOS
-  remote_user: centos
-  become: yes
-  become_user: root
-  tasks:
-    - name: Install on centos
-      package: 
-        name: httpd
-        state: latest
-    
 
 
 - hosts: Debian
