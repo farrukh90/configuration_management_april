@@ -6,16 +6,12 @@
       group_by:
         key: "{{ansible_distribution}}"
 
-- hosts: CentOS
+
+
+  hosts: CentOS
   tasks:
     name: 
       package: httpd
       state: latest
-
-
-- hosts: Debian
-  tasks:
-    ping:
-  
 
 
