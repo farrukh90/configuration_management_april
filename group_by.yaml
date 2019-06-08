@@ -7,8 +7,10 @@
         key: "{{ ansible_distribution }}"
       
 - hosts: CentOS
+  become: yes
+  become_user: root
   remote_user: centos
   tasks:
-    - name: Install on debian 
+    - name: Install on centos 
       package: 
         name: telnet
