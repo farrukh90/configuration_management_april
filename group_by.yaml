@@ -15,7 +15,7 @@
     - name: Install
       package: 
         name: httpd
-        state: latest
+        state: absent
 
 - hosts: Debian
   become: yes
