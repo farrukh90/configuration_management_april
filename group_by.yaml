@@ -4,10 +4,10 @@
   tasks: 
     - name: Group OS
       group_by: 
-        key: "{{ansible_distribution_version}}"
+        key: "{{ ansible_distribution }}-{{ ansible_distribution_version | truncate(1, True, '') }}"
 
 
-- hosts: 9
+- hosts: Debian-9
   remote_user: admin
   tasks:
     - name: Install on debian 
