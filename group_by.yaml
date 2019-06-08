@@ -16,7 +16,6 @@
         name: telnet
         state: absent
 
-
 - hosts: Amazon
   become: yes
   become_user: root
