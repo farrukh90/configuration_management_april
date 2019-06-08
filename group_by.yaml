@@ -7,11 +7,10 @@
         key: "{{ansible_distribution}}"
 
 
-
-  hosts: CentOS
+- hosts: CentOS
   tasks:
-    name: 
-      package: httpd
-      state: latest
-
+    - name: Install
+      package: 
+        name: httpd
+        state: latest
 
