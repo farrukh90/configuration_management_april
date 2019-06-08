@@ -18,8 +18,6 @@
         state: latest
 
 - hosts: Debian
-  become: yes
-  become_user: root
   remote_user: admin
   tasks:
     - name: Install on debian 
