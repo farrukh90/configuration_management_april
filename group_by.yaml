@@ -31,4 +31,6 @@
   become: yes
   become_user: root
   tasks: 
-    ping
+    - name: Install package
+      package: 
+        name: telnet
