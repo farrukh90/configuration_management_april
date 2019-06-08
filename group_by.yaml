@@ -26,7 +26,7 @@
       package: 
         name: telnet
   
-- hosts: EC2
+- hosts: Amazon
   remote_user: ec2-user
   become: yes
   become_user: root
