@@ -48,7 +48,7 @@
 
 
     - name: Create repo on Amazon
-      when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
+      when: ansible_distribution == "Amazon"
       shell: "rpm -Uvh http://repo.nagios.com/nagios/7/nagios-repo-7-3.el7.noarch.rpm"
 
     - name: Install ncpa on centos 7
@@ -59,7 +59,7 @@
       notify: NCPA_AMAZON
 
     - name: Change the code inside ncpa.cfg
-      when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6" 
+      when: ansible_distribution == "Amazon"
       lineinfile:
         path: /usr/local/ncpa/etc/ncpa.cfg
         regexp: "community_string = mytoken"
