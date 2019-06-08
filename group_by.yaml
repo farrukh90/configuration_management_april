@@ -1,0 +1,21 @@
+--- 
+- name: Run tasks based on OS
+  hosts: all 
+  tasks: 
+    - name: Group OS
+      group_by:
+        key: {{ansible_distribution}}
+
+- hosts: CentOS
+  tasks:
+    name: 
+      package: httpd
+      state: latest
+
+
+- hosts: Debian
+  tasks:
+    ping:
+  
+
+
