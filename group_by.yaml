@@ -9,16 +9,26 @@
 
 - hosts: CentOS
   remote_user: centos
+  become: yes
+  become_user: root
   tasks:
     - name: Install
       package: 
         name: httpd
         state: latest
 
-
-- hosts: Ubuntu
-  remote_user: ubuntu
+- hosts: Debian
+  become: yes
+  become_user: root
+  remote_user: admin
   tasks:
     - name: Install 
       package: 
         name: telnet
+  
+- hosts: EC2
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks: 
+    ping
