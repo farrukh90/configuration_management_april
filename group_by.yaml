@@ -8,6 +8,7 @@
 
 
 - hosts: Debian
+  remote_user: admin
   tasks:
     - name: Install on debian 
       package: 
