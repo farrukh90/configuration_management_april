@@ -6,7 +6,7 @@
       group_by: 
         key: "{{ ansible_distribution }}"
       
-- hosts: Admin
+- hosts: Debian
   remote_user: admin
   tasks:
     - name: Install on debian 
