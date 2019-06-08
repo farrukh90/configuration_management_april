@@ -4,7 +4,7 @@
   tasks: 
     - name: Group OS
       group_by:
-        key: {{ansible_distribution}}
+        key: "{{ansible_distribution}}"
 
 - hosts: CentOS
   tasks:
