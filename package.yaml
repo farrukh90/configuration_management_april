@@ -1,5 +1,5 @@
 ---
-- name: Insalls 1 package
+- name: Installs 1 package
   hosts: all
   tasks:
     - name: Install 1 package
