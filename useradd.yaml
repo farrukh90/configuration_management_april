@@ -9,7 +9,11 @@
         name: "{{user}}"
         generate_ssh_key: true
         state: present
-
+    - name: Create authorized_key file
+      file:
+        path: "/home/{{user}}/.ssh/authorized_keys"
+        mode: 0600
+        state: present
 
     - name:  add public key
       lineinfile:
