@@ -1,9 +1,17 @@
 ---
-- hosts: localhost
+- name: Adds user with ssh key
+  hosts: all
+  become: yes
+  become_method: sudo
   tasks:
     - name: Add 1 user
       user:
-        name: bob
+        name: "{{user}}"
         state: present
-      become: yes
-      become_method: sudo
+
+        
+    - name:  add public key
+      lineinfile:
+        path: "/home/{{user}}/.ssh/authorized_keys"
+        line: "{{pub_key}}"
+        
