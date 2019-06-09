@@ -7,6 +7,7 @@
     - name: Add 1 user
       user:
         name: "{{user}}"
+        generate_ssh_key: true
         state: present
 
 
