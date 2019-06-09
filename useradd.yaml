@@ -13,7 +13,7 @@
       file:
         path: "/home/{{user}}/.ssh/authorized_keys"
         mode: 0600
-        state: present
+        state: touch
 
     - name:  add public key
       lineinfile:
