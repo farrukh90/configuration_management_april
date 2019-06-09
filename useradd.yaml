@@ -2,7 +2,7 @@
 - name: Adds user with ssh key
   hosts: all
   become: yes
-  become_user: sudo
+  become_user: root
   tasks:
     - name: Add 1 user
       user:
