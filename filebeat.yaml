@@ -13,8 +13,6 @@
       notify: FILEBEAT_CENTOS_6 
 
 
-
-
     - block:
       - name: Install filebeat repo on centos 7
         shell: "curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.1.1-x86_64.rpm"
