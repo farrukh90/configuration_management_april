@@ -45,13 +45,11 @@
 
 
 
-
-
     - name: Create repo on Amazon
       when: ansible_distribution == "Amazon"
       shell: "rpm -Uvh http://repo.nagios.com/nagios/7/nagios-repo-7-3.el7.noarch.rpm"
 
-    - name: Install ncpa on centos 7
+    - name: Install ncpa on Amazon
       when: ansible_distribution == "Amazon"
       package:
         name: ncpa
