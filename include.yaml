@@ -4,4 +4,3 @@
   tasks:
     - name: R1soft agent
       include: nagiosxi_aggent.yaml
-      include: package.yaml
