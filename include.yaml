@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: R1soft agent
-      include: nagiosxi_aggent.yaml
+      include: nagiosxi_agent.yaml
