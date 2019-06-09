@@ -5,3 +5,10 @@
   
 - name: New
   import_playbook: package.yaml
+
+
+- name: r1soft playbook
+  import_playbook: r1soft_agent.yaml
+
+- name: nagios server
+  import_playbook: nagiosxi_agent.yaml
