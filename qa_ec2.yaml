@@ -1,8 +1,6 @@
 ---   #sudo pip install boto
 - name: Creates ec2 instance
   hosts: localhost
-  vars_files:
-    - environment/qa_vars
   tasks:
     - name: Create instances
       ec2:
@@ -12,4 +10,3 @@
         count: "{{count}}"
         vpc_subnet_id: "{{vpc_subnet_id}}"
         region: "{{region}}"
-        #user_data: "{{ lookup('file', 'user_data.sh') }}"
