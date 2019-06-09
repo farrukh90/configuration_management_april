@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: Run r1soft yaml
+      import_tasks: package.yaml
