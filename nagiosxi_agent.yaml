@@ -36,7 +36,7 @@
       notify: NCPA_CENTOS_7
 
     - name: Change the code inside ncpa.cfg
-      when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6" 
+      when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7" 
       lineinfile:
         path: /usr/local/ncpa/etc/ncpa.cfg
         regexp: "community_string = mytoken"
