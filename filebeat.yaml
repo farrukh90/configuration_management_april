@@ -10,7 +10,7 @@
       - name: Install from rpm
         shell: "rpm -vi filebeat-7.1.1-x86_64.rpm"
       when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6"
-      notify: FILEBEAT_CENTOS_6 
+    notify: FILEBEAT_CENTOS_6 
 
 
     - block:
@@ -19,7 +19,7 @@
       - name: Install from rpm
         shell: "rpm -vi filebeat-7.1.1-x86_64.rpm"
       when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7" 
-      notify: FILEBEAT_CENTOS_7
+    notify: FILEBEAT_CENTOS_7
 
 
 
