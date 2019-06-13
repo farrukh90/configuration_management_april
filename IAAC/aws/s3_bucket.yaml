@@ -6,3 +6,4 @@
       aws_s3:
         bucket: "{{bucket}}"
         mode: "{{mode}}"
+        region: "{{region}}"
