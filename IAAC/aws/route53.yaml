@@ -1,0 +1,12 @@
+---
+- name: Creates route53 entry
+  hosts: localhost
+  tasks:
+    - name: Route53 A Record
+      route53:
+        state: "{{state}}"
+        zone: "{{zone}}"
+        record: "{{record}}"
+        type: A
+        ttl: 7200
+        value: "{{IP}}"
