@@ -1,0 +1,8 @@
+---
+- name: zips files older than 90 days
+  hosts: all 
+  become: yes
+  become_user: root
+  tasks:
+    - name: Zip /var/log
+      shell: "find /var/log/httpd/ -type f -name *.log -mtime +90 -exec gzip -9 {} \; "
