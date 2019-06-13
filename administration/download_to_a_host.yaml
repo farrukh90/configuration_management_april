@@ -1,6 +1,6 @@
 ---
 - name: Helps to download file
-  hosts: all
+  hosts: "{{host}}"
   become: yes
   become_method: sudo
   tasks:
