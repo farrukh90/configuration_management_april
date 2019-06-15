@@ -1,0 +1,6 @@
+--- 
+- name: Creates subnet 
+  hosts: localhost
+  tasks:
+    - name: Create subnet
+      ec2_vpc_net_facts:
