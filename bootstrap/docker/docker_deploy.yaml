@@ -1,0 +1,15 @@
+---
+- name: Installs docker on new instance
+  hosts: localhost
+  vars_files:
+    - docker_vars
+  tasks:
+    - name: Deploy instance
+      ec2:
+        key_name: "{{key_name}}"
+        instance_type: "{{instance_type}}"
+        image: "{{image}}"
+        count: "{{count}}"
+        vpc_subnet_id: "{{vpc_subnet_id}}"
+        region: "{{region}}"
+        user_data: "{{ lookup('file', 'docker_deploy.sh') }}"
