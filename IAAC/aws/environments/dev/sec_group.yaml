@@ -4,3 +4,4 @@
   tasks:
     - name: Create subnet
       ec2_vpc_net_facts:
+      region: us-west-2
