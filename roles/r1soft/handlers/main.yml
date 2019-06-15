@@ -1,2 +1,7 @@
 ---
 # handlers file for r1soft
+- name: R1SOFT_INSTALLED_ON_CENTOS_7
+  systemd:
+    name: sbm-agent
+    state: restarted
+    
