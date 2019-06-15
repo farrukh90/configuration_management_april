@@ -3,17 +3,17 @@
 - name: Install necessary packages
   package: 
     name: "{{item}}"
-    state: latest
+    state: present
     with_items:
-        - wget
-        - unzip
-        - php-gd
-        - httpd
-        - mysql
-        - mariadb-server
-        - php 
-        - php-mysql
-        - php-fpm
+      - wget
+      - unzip
+      - php-gd
+      - httpd
+      - mysql
+      - mariadb-server
+      - php
+      - php-mysql
+      - php-fpm
     ignore_errors: true
 
 - name: Download wordpress package
@@ -38,7 +38,7 @@
 - name: Restart httpd 
   systemd:
     name: httpd
-    state: started
+    state: stopped
     enabled: yes
   become: yes
   become_method: sudo
