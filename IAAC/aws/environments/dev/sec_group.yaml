@@ -3,5 +3,4 @@
   hosts: localhost
   tasks:
     - name: Create subnet
-      region: "us-west-2"
       ec2_vpc_net_facts:
