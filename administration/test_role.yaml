@@ -5,5 +5,5 @@
   become_user: root
   roles:
     - package
-    - wordpress
+    - frogyyen.centos7-wordpress
     - r1soft
